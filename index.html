@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>TestApp</title>
+    <link rel="manifest" href="manifest.json">
+  <!-- 以下は、自動で追加されたコード -->
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+  <!-- 省略... -->
+  </head>
+  <body>
+    <h1>TestApp</h1>
+    <img src="kayak.svg">
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').then(reg => {
+    console.log('サービスワーカーを登録しました', reg);
+  }).catch(err => {
+    console.log('登録失敗', err);
+  });
+}
+</script>
+</body></html>
